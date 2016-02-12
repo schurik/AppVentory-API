@@ -15,5 +15,7 @@ import com.levelapp.appventory.model.App;
  */
 public interface AppRepository extends PagingAndSortingRepository<App, Long> {
 
-	Set<App> findByClientId(final String clientId);
+	Set<App> findByClientId(String clientId);
+
+	App findByItunesId(String itunesId);
 }

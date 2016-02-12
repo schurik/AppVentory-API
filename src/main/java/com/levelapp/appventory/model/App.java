@@ -29,15 +29,15 @@ public class App {
 	@JsonIgnore
 	private Long id;
 
-	private String iTunesId;
+	private String itunesId;
 	private String clientId;
 
 	protected App() {
 	}
 
-	public App(String iTunesId, String clientId) {
+	public App(String itunesId, String clientId) {
 		super();
-		this.iTunesId = iTunesId;
+		this.itunesId = itunesId;
 		this.clientId = clientId;
 	}
 

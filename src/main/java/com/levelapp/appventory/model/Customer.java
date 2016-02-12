@@ -15,8 +15,12 @@ import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.Singular;
 import lombok.ToString;
 
 /**
@@ -28,6 +32,9 @@ import lombok.ToString;
 @Data
 @EqualsAndHashCode
 @ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
 	@Id
@@ -38,6 +45,7 @@ public class Customer {
 	private String customerId;
 
 	@ManyToMany
+	@Singular("addApp")
 	private Set<App> apps;
 
 }

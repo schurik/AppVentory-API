@@ -13,5 +13,5 @@ import com.levelapp.appventory.model.Developer;
  */
 public interface DeveloperRepository extends CrudRepository<Developer, Long> {
 
-	Developer findByEmail(final String email);
+	Developer findByEmail(String email);
 }
